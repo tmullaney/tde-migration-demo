@@ -74,7 +74,7 @@ go
 -- certificate files.
 
 
--- Cleanup/reset the whole demo 
+-- Cleanup/reset the demo 
 USE master
 go
 
@@ -86,4 +86,3 @@ go
 
 DROP MASTER KEY
 go
-

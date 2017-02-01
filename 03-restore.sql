@@ -1,7 +1,7 @@
 -- Connect to the SQL Server instance on Linux
 USE master
 go
-	
+
 -- Make sure the master database has a database master key
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'AnyStrongPassword123'
 go
@@ -33,4 +33,18 @@ SELECT
 	dek.key_length
 FROM sys.dm_database_encryption_keys dek
 INNER JOIN sys.databases db ON db.database_id = dek.database_id
+go
+
+
+-- Cleanup/reset the whole demo 
+USE master
+go
+
+DROP DATABASE TestDB
+go
+
+DROP CERTIFICATE MyServerCert
+go
+
+DROP MASTER KEY
 go
