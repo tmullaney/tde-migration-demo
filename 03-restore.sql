@@ -7,15 +7,14 @@ CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'AnyStrongPassword123'
 go
 
 -- Re-create the server certificate from the file you copied from Windows
--- The wonky 'c:\' syntax is a bug that is being fixed! :)
-CREATE CERTIFICATE MyServerCert FROM FILE = 'c:\var\opt\mssql\data\MyServerCert.cer'  
+CREATE CERTIFICATE MyServerCert FROM FILE = N'/var/opt/mssql/data/MyServerCert.cer'  
 WITH PRIVATE KEY (  
-	FILE = 'c:\var\opt\mssql\data\MyServerCert-PrivateKey.pvk',  
+	FILE = N'/var/opt/mssql/data/MyServerCert-PrivateKey.pvk',  
 	DECRYPTION BY PASSWORD = 'AnotherStrongPassword123'  
 )  
 go
 	
--- Restore the database backup 
+-- Restore the database backupÂ 
 RESTORE DATABASE TestDB FROM DISK = N'/var/opt/mssql/data/TestDB.bak' 
 	WITH FILE = 1,  
 	MOVE N'TestDB' TO N'/var/opt/mssql/data/TestDB.mdf',  
