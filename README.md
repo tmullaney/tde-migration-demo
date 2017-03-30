@@ -28,4 +28,4 @@ Simple demo migrating an encrypted database from SQL Server on Windows to Linux.
  
 ## Useful links
  * [aka.ms/sqldev](aka.ms/sqldev) - Build a simple app with SQL Server in any language, on any platform
- * [msdn.microsoft.com/commandline/wsl/install_guide] (https://msdn.microsoft.com/commandline/wsl/install_guide) - Enable Bash on Windows 10
+ * [msdn.microsoft.com/commandline/wsl/install_guide](https://msdn.microsoft.com/commandline/wsl/install_guide) - Enable Bash on Windows 10
